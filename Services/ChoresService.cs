@@ -1,10 +1,23 @@
-namespace choresManagement.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-public readonly ChoresRepository _repo;
-
-public ChoresService(ChoresRepository repo)
+namespace choresmanagement.Services
 {
-    _repo = repo;
-}
+    public class ChoresService
+    {
+        private readonly ChoresRepository _repo;
 
-internal Chores Create(Chore choreData)
+        public ChoresService(ChoresRepository repo)
+        {
+            _repo = repo;
+        }
+
+        internal List<Chore> Get()
+        {
+            List<Chore> chores = _repo.Get();
+            return chores;
+        }
+    }
+}

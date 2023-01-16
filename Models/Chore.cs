@@ -1,4 +1,4 @@
-namespace choresManagement.Models;
+namespace choresmanagement.Models;
 
 public class Chore
 {
