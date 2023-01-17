@@ -46,15 +46,15 @@ public class Startup
         services.AddCors(options =>
         {
             options.AddPolicy("CorsDevPolicy", builder =>
-              {
-                  builder
+            {
+                builder
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials()
                 .WithOrigins(new string[]{
                 "http://localhost:8080", "http://localhost:8081"
               });
-              });
+            });
         });
     }
 

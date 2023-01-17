@@ -19,5 +19,17 @@ namespace choresmanagement.Services
             List<Chore> chores = _repo.Get();
             return chores;
         }
+
+        internal Chore Create(Chore choreData)
+        {
+            Chore newChore = _repo.Create(choreData);
+            return newChore;
+        }
+
+        internal string Remove(int id)
+        {
+            string message = _repo.Remove(id);
+            return message;
+        }
     }
 }
